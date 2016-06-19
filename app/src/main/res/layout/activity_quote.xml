@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_rel"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mpv.canvasexample.QuoteActivity">
+
+    <LinearLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="70.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gallery_strip"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/image_but"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pic"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/done_but"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/done"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomlayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomlayout"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/text_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="bottom|center" >
+
+            <fragment
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:name="com.mpvillafranca.quotesapp.TypeTextFragment"
+                android:id="@+id/gragment"
+                tools:layout="@layout/type_text_fragment"/>
+
+            <EditText
+                android:id="@+id/textedt"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:ems="10"
+                android:gravity="top"
+                android:maxLength="25"
+                android:textSize="20.0dip"
+                android:inputType="text"
+                android:hint="@string/type_the_quote"/>
+
+            <EditText
+                android:id="@+id/authoredt"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:ems="10"
+                android:gravity="top"
+                android:maxLength="25"
+                android:textSize="20.0dip"
+                android:inputType="text"
+                android:hint="@string/type_the_author"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainlay_rel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottomlayout1"
+        android:layout_centerInParent="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:id="@+id/capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <fragment
+                android:id="@+id/picture_fragment"
+                android:layout_width="426dp"
+                android:layout_height="240dp"
+                android:name="com.mpvillafranca.quotesapp.PictureFragment"
+                tools:layout="@layout/picture_fragment" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

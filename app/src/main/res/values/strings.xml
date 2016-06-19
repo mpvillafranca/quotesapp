@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Quotes</string>
+    <string name="new_quote">New Quote</string>
+    <string name="save">Save</string>
+    <string name="share">Share</string>
+    <string name="type_the_quote">Type the quote</string>
+    <string name="type_the_author">Type the author</string>
+    <string name="imagen_final">Final image:</string>
+    <string name="pic">Pic</string>
+    <string name="done">Done</string>
+    <string name="apply_text">Apply</string>
+    <string name="camera">Camera</string>
+</resources>
