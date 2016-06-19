@@ -4,7 +4,7 @@ by *@mpvillafranca*
 
 > Simple Android app to create "Quotes" kind of images
 
-![](http://i.imgur.com/lW5KW3d.png)
+![](http://i.imgur.com/3eeSyot.png)
 
 Features:
 * [X] Type a phrase, the author and add his picture to generate a quote image.
